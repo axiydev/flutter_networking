@@ -14,7 +14,6 @@ _$_DataResponse _$$_DataResponseFromJson(Map<String, dynamic> json) =>
               e == null ? null : DataModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       message: json['message'] as String?,
-      profileImage: json['profileImage'] as String?,
     );
 
 Map<String, dynamic> _$$_DataResponseToJson(_$_DataResponse instance) =>
@@ -22,5 +21,4 @@ Map<String, dynamic> _$$_DataResponseToJson(_$_DataResponse instance) =>
       'id': instance.status,
       'data': instance.data,
       'message': instance.message,
-      'profileImage': instance.profileImage,
     };

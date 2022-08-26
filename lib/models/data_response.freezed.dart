@@ -26,7 +26,6 @@ mixin _$DataResponse {
   List<DataModel?>? get data => throw _privateConstructorUsedError;
   @JsonKey(name: 'message')
   String? get message => throw _privateConstructorUsedError;
-  String? get profileImage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,8 +41,7 @@ abstract class $DataResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') String? status,
       @JsonKey(name: 'data') List<DataModel?>? data,
-      @JsonKey(name: 'message') String? message,
-      String? profileImage});
+      @JsonKey(name: 'message') String? message});
 }
 
 /// @nodoc
@@ -59,7 +57,6 @@ class _$DataResponseCopyWithImpl<$Res> implements $DataResponseCopyWith<$Res> {
     Object? status = freezed,
     Object? data = freezed,
     Object? message = freezed,
-    Object? profileImage = freezed,
   }) {
     return _then(_value.copyWith(
       status: status == freezed
@@ -73,10 +70,6 @@ class _$DataResponseCopyWithImpl<$Res> implements $DataResponseCopyWith<$Res> {
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-      profileImage: profileImage == freezed
-          ? _value.profileImage
-          : profileImage // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -92,8 +85,7 @@ abstract class _$$_DataResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') String? status,
       @JsonKey(name: 'data') List<DataModel?>? data,
-      @JsonKey(name: 'message') String? message,
-      String? profileImage});
+      @JsonKey(name: 'message') String? message});
 }
 
 /// @nodoc
@@ -112,7 +104,6 @@ class __$$_DataResponseCopyWithImpl<$Res>
     Object? status = freezed,
     Object? data = freezed,
     Object? message = freezed,
-    Object? profileImage = freezed,
   }) {
     return _then(_$_DataResponse(
       status: status == freezed
@@ -127,10 +118,6 @@ class __$$_DataResponseCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
-      profileImage: profileImage == freezed
-          ? _value.profileImage
-          : profileImage // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -142,8 +129,7 @@ class _$_DataResponse implements _DataResponse {
   const _$_DataResponse(
       {@JsonKey(name: 'id') this.status,
       @JsonKey(name: 'data') final List<DataModel?>? data,
-      @JsonKey(name: 'message') this.message,
-      this.profileImage})
+      @JsonKey(name: 'message') this.message})
       : _data = data;
 
   factory _$_DataResponse.fromJson(Map<String, dynamic> json) =>
@@ -165,12 +151,10 @@ class _$_DataResponse implements _DataResponse {
   @override
   @JsonKey(name: 'message')
   final String? message;
-  @override
-  final String? profileImage;
 
   @override
   String toString() {
-    return 'DataResponse(status: $status, data: $data, message: $message, profileImage: $profileImage)';
+    return 'DataResponse(status: $status, data: $data, message: $message)';
   }
 
   @override
@@ -180,9 +164,7 @@ class _$_DataResponse implements _DataResponse {
             other is _$_DataResponse &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality().equals(other._data, _data) &&
-            const DeepCollectionEquality().equals(other.message, message) &&
-            const DeepCollectionEquality()
-                .equals(other.profileImage, profileImage));
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @JsonKey(ignore: true)
@@ -191,8 +173,7 @@ class _$_DataResponse implements _DataResponse {
       runtimeType,
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(_data),
-      const DeepCollectionEquality().hash(message),
-      const DeepCollectionEquality().hash(profileImage));
+      const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -211,8 +192,7 @@ abstract class _DataResponse implements DataResponse {
   const factory _DataResponse(
       {@JsonKey(name: 'id') final String? status,
       @JsonKey(name: 'data') final List<DataModel?>? data,
-      @JsonKey(name: 'message') final String? message,
-      final String? profileImage}) = _$_DataResponse;
+      @JsonKey(name: 'message') final String? message}) = _$_DataResponse;
 
   factory _DataResponse.fromJson(Map<String, dynamic> json) =
       _$_DataResponse.fromJson;
@@ -226,8 +206,6 @@ abstract class _DataResponse implements DataResponse {
   @override
   @JsonKey(name: 'message')
   String? get message;
-  @override
-  String? get profileImage;
   @override
   @JsonKey(ignore: true)
   _$$_DataResponseCopyWith<_$_DataResponse> get copyWith =>

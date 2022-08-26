@@ -6,11 +6,11 @@ part 'data_model_for_response.g.dart';
 @freezed
 class DataModelResponse with _$DataModelResponse {
   @JsonSerializable()
-  const factory DataModelResponse(
-      {@JsonKey(name: 'id') String? status,
-      @JsonKey(name: 'data') DataModel? data,
-      @JsonKey(name: 'message') String? message,
-      String? profileImage}) = _DataModelResponse;
+  const factory DataModelResponse({
+    @JsonKey(name: 'id') String? status,
+    @JsonKey(name: 'data') DataModel? data,
+    @JsonKey(name: 'message') String? message,
+  }) = _DataModelResponse;
 
   factory DataModelResponse.fromJson(Map<String, Object?> json) =>
       _$DataModelResponseFromJson(json);
