@@ -60,6 +60,7 @@ class DioNetworkService {
     return null;
   }
 
+  ///get NBU Json
   Future<List<BankModel?>?> getNBUJson() async {
     try {
       var uri = Uri.tryParse(Urls.nbuApi);
